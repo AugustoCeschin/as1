@@ -1,0 +1,126 @@
+.registro-form {
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+}
+
+.registro-form h2 {
+    font-size: 2em;
+    color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.form-campo {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 2px solid var(--cor-secundaria);
+    margin: 30px 0;
+}
+
+.form-campo label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .4s;
+}
+
+.form-campo input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--cor-secundaria);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+
+.form-campo .icone {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--cor-secundaria);
+}
+
+.form-botao {
+    width: 100%;
+    height: 45px;
+    background: var(--cor-secundaria);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    transition: .5s;
+}
+
+.form-botao:hover{
+    background: var(--cor-terciaria);
+}
+
+.form-termos {
+    font-size: .9em;
+    color: var(--cor-secundaria);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-termos label input{
+    accent-color: var(--cor-secundaria);
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.form-termos a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+.form-termos a:hover {
+    text-decoration: underline;
+}
+
+
+/* formAction */
+
+.conteiner.form-action {
+    width: 500px;
+    height: 600px;
+    user-select: text;
+    
+}
+.action-campo {
+    margin-top: 50px;
+}
+.tabela {
+    text-align: left;
+    width: 100%;
+    color: var(--cor-secundaria);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.tabela th {
+    border: 2px solid rgba(255,255,255, .5);
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.tabela td {
+    width: 100%;
+    border: 2px solid rgba(255,255,255, .5);
+    font-size: 1em;
+    padding: 5px;
+}
+

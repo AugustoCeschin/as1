@@ -1,0 +1,56 @@
+.header__logo {
+    font-size: 2em;
+    color: var(--cor-primaria);
+}
+
+/* Estiliza tags <a> links-menu*/
+.header__menu a {
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.header__menu a::after {/* Adiciona elemento de transição em <a> */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--cor-primaria);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+
+.header__menu a:hover::after {/* Utiliza seleção de estado(hover) com elemento de transição(after) */
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Estiliza botão de login-menu */
+.header__botaoForm {
+    cursor: pointer;
+    width: 125px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--cor-primaria);
+    margin-left: 40px;
+    transition: .25s;
+}
+
+.header__botaoForm:hover {/* Utiliza seleção de estado(hover) */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}

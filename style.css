@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('/styles/header.css');
+@import url('/styles/form.css');
+
+:root {
+    --cor-primaria: #f7f7f7;
+    --cor-secundaria: #162938;
+    --cor-terciaria: #2c516b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assets/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.conteiner {
+    position: relative;
+    width: 400px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.conteiner.mostrar {
+    transform: scale(1);
+}
+
+.conteiner .icone-fechar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--cor-secundaria);
+    font-size: 2em;
+    color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .2s;
+    text-decoration: none;
+}
+
+.icone-fechar:hover {
+    background: var(--cor-terciaria);
+}
+
+.conteiner.conteiner-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 800px;
+    height: 440px;
+    user-select: text;
+}
+
+.about-conteudo {
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+}
+
+.about-conteudo h2 {
+    font-size: 2em;
+    color: var(--cor-secundaria);
+    text-align: left;
+}
+.about-conteudo p {
+    margin-top: 10px;
+    color: var(--cor-secundaria);
+    text-align: justify;
+}
