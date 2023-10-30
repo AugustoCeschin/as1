@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AS1 FormAction</title>
+</head>
+<body>
+    <script src="scripts/form.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+
+    <div class="conteiner form-action">
+        <div class="registro-form form-action">
+            <h2>RECEBIMENTO DADOS DE FORMULÁRIOS</h2>
+
+            <div class="action-campo">
+                <table class="tabela">
+                    <tr><th>Chave</th><th>Valor</th></tr>
+                    <script language=javascript>
+                        var params = new Array();
+                        params = getParameters();
+                        for (let [key, value] of Object.entries(params)) {
+                            document.write("<tr><td style='text-align: left;'><b>" + key + "</b></td><td>" + value + "</td></tr>");
+                        }
+                    </script>
+                </table>
+            </div>
+
+            <div class="action-campo form-botao">
+                <button class="form-botao" onclick="window.location.href = '/form.html'">Retornar</button>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script src="scripts/header.js"></script>
+</body>
+</html>
